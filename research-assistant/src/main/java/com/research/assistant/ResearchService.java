@@ -19,8 +19,8 @@ public class ResearchService {
     private final WebClient webClient;
     private final ObjectMapper objectMapper;
 
-    public ResearchService(WebClient webClient, ObjectMapper objectMapper) {
-        this.webClient = webClient;
+    public ResearchService(WebClient.Builder webClientBuilder, ObjectMapper objectMapper) {
+        this.webClient = webClientBuilder.build();
         this.objectMapper = objectMapper;
     }
 
